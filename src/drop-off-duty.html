@@ -131,6 +131,136 @@
         .back-link a:hover {
             text-decoration: underline;
         }
+
+        .g-buffer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+            row-gap: 10px;
+            margin: 10px 0;
+            max-width: 1000px;
+            width: 100%;
+            justify-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .g-buffer-item {
+            text-align: center;
+        }
+        
+        .g-buffer-item img {
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 400px;
+            border: 6px solid #000;
+            background-color: #fff;
+            display: block;
+        }
+        
+        .g-buffer-result {
+            text-align: center;
+        }
+
+        .g-buffer-result img {
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 400px;
+            border: 6px solid #000;
+            background-color: #fff;
+            display: block;
+        }
+
+        .g-buffer-label {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .image-slider-section {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .image-slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .slider-images {
+            position: relative;
+            width: 100%;
+        }
+
+        .slider-image {
+            width: 100%;
+            max-height: 400px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+
+        .slider-image:first-child {
+            position: relative;
+            z-index: 1;
+        }
+
+        .slider-control {
+            width: 100%;
+            margin-top: 10px;
+            appearance: none;
+            height: 8px;
+            background: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .slider-control:focus {
+            outline: none;
+        }
+
+        .slider-control::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #007bff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .second-image-wrapper {
+           position: absolute;
+           top: 0;
+           left: 0;
+           height: 100%;
+           width: 100%;
+           z-index: 2;
+           clip-path: inset(0 50% 0 0); /* Initial state */
+           pointer-events: none;
+        }
+
+        .second-image {
+            width: 100%;
+        }
+
+        .slider-divider {
+           position: absolute;
+           top: 0;
+           right: 0;
+           width: 2px;
+           height: 100%;
+           background-color: #007bff;
+           z-index: 3;
+        }
+
     </style>
 </head>
 <body>
@@ -168,28 +298,72 @@
             </div>
 
             <div class="subsection">
-                <h3>Deferred shading</h3>
-                <p>Implemented deferred shading to optimize rendering and enable multiple dynamic lights efficiently</p>
-                <img class="contribution-img" src="../images/dflt.png" alt="Post-processing Screenshot">
-            </div>
+                <h3>Deferred Shading</h3>
+                <p>Implemented deferred shading to optimize rendering and enable multiple dynamic lights efficiently.</p>
+                
+                <div class="g-buffer-grid">
+                    <div class="g-buffer-item">
+                        <img src="../images/Drop-Off Duty/Deferred_color.png" alt="G-Buffer Color">
+                        <div class="g-buffer-label">Color</div>
+                    </div>
+                    <div class="g-buffer-item">
+                        <img src="../images/Drop-Off Duty/Deferred_normals.png" alt="G-Buffer Normals">
+                        <div class="g-buffer-label">Normals</div>
+                    </div>
+                    <div class="g-buffer-item">
+                        <img src="../images/Drop-Off Duty/Deferred_spec.png" alt="G-Buffer Specular">
+                        <div class="g-buffer-label">Specular</div>
+                    </div>
+                    <div class="g-buffer-item">
+                        <img src="../images/Drop-Off Duty/Deferred_emmisive.png" alt="G-Buffer Emmisive">
+                        <div class="g-buffer-label">Emmisive</div>
+                    </div>
+                    <div class="g-buffer-result" style="grid-column: span 2;">
+                        <img src="../images/Drop-Off Duty/Deferred_result.png" alt="Final Deferred Shading Result">
+                        <div class="g-buffer-label">Final Combined Image</div>
+                    </div>
+                </div>
 
             <div class="subsection">
                 <h3>Post-processing Effects</h3>
-            
+                
                 <div class="subsection">
-                    <h4>Bloom</h4>
-                    <img class="contribution-img" src="../images/dflt.png" alt="Bloom Effect Screenshot">
+                    <h4>Bloom Effect</h4>
+                    <div class="image-slider-section">
+                        <div class="image-slider">
+                          <div class="slider-images">
+                            <img src="../images/Drop-Off Duty/Deferred_emmisive.png" class="slider-image base-image" alt="Base image">
+                            <div class="second-image-wrapper">
+                              <img src="../images/Drop-Off Duty/bloom.png" class="slider-image second-image" alt="Second image">
+                              <div class="slider-divider"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <input type="range" class="slider-control" min="0" max="100" value="50">
+                    </div>
                 </div>
-            
+
                 <div class="subsection">
                     <h4>Screen space ambient occlusion (SSAO)</h4>
-                    <img class="contribution-img" src="../images/dflt.png" alt="SSAO Screenshot">
+                    <img class="contribution-img" src="../images/Drop-Off Duty/ssao.png" alt="SSAO Screenshot">
                 </div>
-            
+
                 <div class="subsection">
                     <h4>Sun Effect</h4>
-                    <img class="contribution-img" src="../images/Drop-Off Duty/Light.png" alt="Sun effect Screenshot">
+                    <div class="image-slider-section">
+                        <div class="image-slider">
+                          <div class="slider-images">
+                            <img src="../images/Drop-Off Duty/final_image.png" class="slider-image base-image" alt="Base image">
+                            <div class="second-image-wrapper">
+                              <img src="../images/Drop-Off Duty/sun.png" class="slider-image second-image" alt="Second image">
+                              <div class="slider-divider"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <input type="range" class="slider-control" min="0" max="100" value="50">
+                    </div>
                 </div>
+
             </div>
 
         </div>
@@ -198,5 +372,24 @@
             <a href="../index.html">← Back to Portfolio</a>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.image-slider-section').forEach(section => {
+          const slider = section.querySelector('.slider-control');
+          const overlay = section.querySelector('.second-image-wrapper');
+          const divider = overlay.querySelector('.slider-divider');
+      
+          const updateSlider = () => {
+            const value = slider.value;
+            overlay.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+            divider.style.right = `${100 - value}%`;
+          };
+      
+          slider.addEventListener('input', updateSlider);
+          updateSlider(); // initialize
+        });
+      </script>
+      
+
 </body>
 </html>
