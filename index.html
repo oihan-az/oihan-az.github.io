@@ -1,71 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oihan Abruña - Portfolio</title>
-    <link rel="icon" href="images/icons/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; text-align: center; background: #f4f4f4; }
-        .container { width: 100%; margin: auto; padding: 20px; }
-        .hero { background: #007bff; color: white; padding: 60px 20px; width: 100%; }
-        .hero h1 { margin: 0; font-size: 2.5em; }
-        .section { padding: 40px 20px; }
-        .project { width: 800px; max-width: 70%; margin: 0 auto 60px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .project h3 { border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 5px; }
-        .project h3 a { text-decoration: none; color: #007bff; }
-        .project h3 a:hover { text-decoration: underline; }
-        .project img { display: block; margin: 10px auto; height: auto; width: auto; max-width: 100%; max-height: 200px; border-radius: 10px; }
-        .project-description { font-size: 1em; color: #333; margin-bottom: 20px; }
-        .contact p { margin: 5px 0; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oihan Abruña - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .hero {
+      background: #007bff;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .projects-header {
+      position: relative;
+      width: 100%;
+      margin: 1em 0 0.5em;
+      text-align: center;
+    }
+
+    .projects-text {
+      display: inline-block;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: inherit;
+      margin: 0;
+    }
+
+    .projects-text a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .projects-text a:hover {
+      text-decoration: underline;
+    }
+
+    .arrow-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: calc(41%);
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .arrow-icon:hover {
+      transform: translateY(-50%) scale(1.6);
+    }
+
+    .arrow-icon.rotated {
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    .arrow-icon.rotated:hover {
+      transform: translateY(-50%) rotate(90deg) scale(1.6);
+    }
+
+    .arrow-icon:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .categories {
+      margin-top: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      display: none;
+    }
+
+    .categories.visible {
+      display: block;
+    }
+
+    .category {
+      margin: 20px 0;
+    }
+
+    .category-name {
+      font-size: 1.4em;
+      font-weight: 600;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+
+    .category:not(.open) .category-name:hover {
+      text-decoration: underline;
+    }
+
+    .category.open .category-name {
+      text-decoration: underline;
+    }
+
+    .category.open .category-name:hover {
+      text-decoration: none;
+    }
+
+    .projects-list {
+      margin-top: 8px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      display: none;
+    }
+
+    .projects-list.visible {
+      display: block;
+    }
+
+    .projects-list a {
+      display: block;
+      width: fit-content;
+      margin: 6px auto;
+      font-size: 1em;
+      color: #007bff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: text-decoration 0.2s;
+    }
+
+    .projects-list a:hover,
+    .projects-list a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    .project-section-label {
+      font-weight: 600;
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+    
+    a {
+      color: #007bff;
+    }
+
+    /* Logo and icons styling */
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .tech-icons img {
+      height: 40px;
+      width: auto;
+    }
+
+    /* Smaller, subtle currently learning section */
+    .learning-label {
+      font-weight: 500;
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    .tech-icons.learning img {
+      height: 25px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>Oihan Abruña</h1>
-        <p>Digipen Student | Computer Science in Real-Time Interactive Simulation</p>
+
+  <div class="hero">
+    <h1>Oihan Abruña</h1>
+    <p>Digipen Student | Computer Science in Real‑Time Interactive Simulation</p>
+  </div>
+
+  <div class="section about">
+    <h2>About Me</h2>
+    <p><!-- Add a brief description about yourself here --></p>
+  </div>
+
+  <div class="section skills">
+    <h2>Skills</h2>
+    <div class="tech-icons">
+      <img src="images/icons/cpp.png" alt="C++ Logo" />
+      <img src="images/icons/opengl.png" alt="OpenGL Logo" />
     </div>
+
+    <h3 class="learning-label">Currently Learning</h3>
+    <div class="tech-icons learning">
+      <img src="images/icons/vulkan.png" alt="Vulkan Logo" />
+    </div>
+  </div>
+
+  <div class="section projects">
+    <div class="projects-header">
+      <h2 class="projects-text">
+        <a href="projects.html" class="projects-link">Projects</a>
+      </h2>
+      <svg id="projects-arrow" class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" tabindex="0" role="button" aria-expanded="false" aria-controls="categories">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+
+    <div class="categories" id="categories"></div>
+  </div>
+
+  <div class="section contact">
+    <h2>Contact</h2>
+    <p>Email: oihanabruna@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/oihan-az">github.com/oihan-az</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/oihan-abruña">linkedin.com/in/oihan-abruña</a></p>
+  </div>
+
+  <script src="projects.js"></script>
+  <script>
+    const arrow = document.getElementById('projects-arrow');
+    const categoriesContainer = document.getElementById('categories');
+
+    arrow.addEventListener('click', () => {
+      categoriesContainer.classList.toggle('visible');
+      arrow.classList.toggle('rotated');
+      arrow.setAttribute('aria-expanded', categoriesContainer.classList.contains('visible'));
+    });
+
+    arrow.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        arrow.click();
+      }
+    });
+
+    function createProjectLink(project) {
+      const a = document.createElement('a');
+      a.href = project.link;
+      a.setAttribute('tabindex', '0');
     
-    <div class="container">
-        <div class="section projects">
-            <h2>Projects</h2>
-            
-            <div class="project">
-                <h3><a href="src/drop-off-duty.html">Drop-Off Duty</a></h3>
-                <img src="images/Drop-Off Duty/Game icon-full.png" alt="Drop-Off Duty Screenshot">
-                <p class="project-description">3D time trial driving and shooting video game.</p>
-            </div>
-            
-            <div class="project">
-                <h3><a href="src/zima-polaris.html">Zima Polaris</a></h3>
-                <img src="images/Zima Polaris/ZimaPolaris.png" alt="Zima Polaris Screenshot">
-                <p class="project-description">2D platform, adventure, and puzzle video game.</p>
-            </div>
+      const title = document.createElement('span');
+      title.textContent = project.title;
+    
+      a.appendChild(title);
+    
+      if (project.wip) {
+        const wipTag = document.createElement('span');
+        wipTag.textContent = ' 🚧 WIP';
+        wipTag.style.color = '#ff9900';
+        wipTag.style.fontWeight = '500';
+        wipTag.style.marginLeft = '6px';
+        a.appendChild(wipTag);
+      }
+  
+      return a;
+    }
 
-            <div class="project">
-                <h3><a href="src/acc-structs.html">Acceleration data structures</a></h3>
-                <img src="images/dflt.png" alt="AccStructs Screenshot">
-            </div>
+    function createCategory(name, mainProjects, others) {
+      const categoryDiv = document.createElement('div');
+      categoryDiv.className = 'category';
+      categoryDiv.setAttribute('role', 'button');
+      categoryDiv.setAttribute('tabindex', '0');
 
-            <div class="project">
-                <h3><a href="src/model-inspector.html">Model inspector (Vulkan)</a></h3>
-                <img src="images/dflt.png" alt="ModelInspectorScreenshot">
-            </div>
+      const idSafeName = name.toLowerCase().replace(/\s+/g, '-');
+      categoryDiv.setAttribute('aria-controls', idSafeName + '-projects');
 
-            <div class="project">
-                <h3><a href="src/side-channel-trace-viewer.html">Side channel trace viewer</a></h3>
-                <img src="images/dflt.png" alt="SideChannelTraceViewer Screenshot">
-            </div>
+      const catNameSpan = document.createElement('span');
+      catNameSpan.className = 'category-name';
+      catNameSpan.textContent = name;
+      categoryDiv.appendChild(catNameSpan);
 
-        </div>
-        
-        <div class="section contact">
-            <h2>Contact</h2>
-            <p>Email: oihanabruna@gmail.com</p>
-            <p>GitHub: <a href="https://github.com/oihan-az">github.com/oihan-az</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/oihan-abruña">linkedin.com/in/oihan-abruña</a></p>
-        </div>
-    </div>
+      const projectsList = document.createElement('div');
+      projectsList.className = 'projects-list';
+      projectsList.id = idSafeName + '-projects';
+
+      mainProjects.forEach(proj => {
+        projectsList.appendChild(createProjectLink(proj));
+      });
+
+      if (others && Array.isArray(others) && others.length > 0) {
+        const othersLabel = document.createElement('div');
+        othersLabel.className = 'project-section-label';
+        othersLabel.textContent = 'Others (Secondary Category)';
+        projectsList.appendChild(othersLabel);
+
+        others.forEach(proj => {
+          projectsList.appendChild(createProjectLink(proj));
+        });
+      }
+
+      categoryDiv.appendChild(projectsList);
+
+      catNameSpan.addEventListener('click', () => {
+        projectsList.classList.toggle('visible');
+        categoryDiv.classList.toggle('open');
+      });
+
+      catNameSpan.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          catNameSpan.click();
+        }
+      });
+
+      return categoryDiv;
+    }
+
+    function buildProjectsUI(data) {
+      categoriesContainer.innerHTML = '';
+
+      for (const [category, content] of Object.entries(data)) {
+        if (Array.isArray(content)) {
+          categoriesContainer.appendChild(createCategory(category, content, []));
+        } else {
+          const main = content.main || [];
+          const others = content.Others || [];
+          categoriesContainer.appendChild(createCategory(category, main, others));
+        }
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (typeof projectsData !== 'undefined') {
+        buildProjectsUI(projectsData);
+      } else {
+        console.error('projectsData is not defined.');
+      }
+    });
+  </script>
 </body>
 </html>
