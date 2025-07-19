@@ -50,5 +50,15 @@ const projectsData = {
         "link": "src/acc-structs.html"
       }
     ]
+  },
+  "AI": {
+    "main": [
+      {
+        "title": "Crowd Simulation",
+        "link": "src/crowd-simulation.html",
+        "image": "images/dflt.png",
+        "description": "Real-time crowd simulation in Unreal Engine featuring collision avoidance and density awareness."
+      },],
+    "Others": []
   }
 };
