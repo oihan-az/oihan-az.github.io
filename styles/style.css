@@ -43,15 +43,19 @@ body {
 }
 
 .section h2 {
-    border-bottom: 3px solid #007bff;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
 
-.contributions, .tech-used, .engine-section {
+.contributions, .engine-section {
     text-align: left;
     margin-top: 20px;
+}
+
+.tech-used {
+    text-align: center;
+    margin: 20px auto;
 }
 
 ul {
@@ -102,9 +106,9 @@ img.contribution-img {
 }
 
 .subsection h3 {
-    color: #007bff;
-    font-size: 1.4em;
-    margin-bottom: 10px;
+    color: #000000;
+    font-size: 1.2em;
+    margin-bottom: 40px;
     border-bottom: 2px solid #007bff;
     padding-bottom: 4px;
 }

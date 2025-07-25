@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Drop-Off Duty</title>
-    <link rel="icon" href="../images/icons/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../images/icons/favicon.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/style.css" />
     <style>
-
         .g-buffer-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -25,7 +24,7 @@
         .g-buffer-item {
             text-align: center;
         }
-        
+
         .g-buffer-item img {
             height: auto;
             width: auto;
@@ -35,7 +34,7 @@
             background-color: #fff;
             display: block;
         }
-        
+
         .g-buffer-result {
             text-align: center;
         }
@@ -57,6 +56,51 @@
             color: #333;
         }
 
+        /* Trailer section styles */
+        .trailer-section {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 12px;
+            color: #eee;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .trailer-section h2 {
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #000000;
+        }
+
+        .trailer-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 6px solid #000;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #000;
+            margin-bottom: 12px;
+        }
+
+        .trailer-container iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: none;
+        }
+
+        .youtube-link a {
+            color: #f0a500;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .youtube-link a:hover,
+        .youtube-link a:focus {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -65,103 +109,136 @@
         <p>3D time trial driving and shooting video game.</p>
     </div>
 
-    <div class="container">
+    <!-- Trailer Section -->
+    <section class="trailer-section" aria-label="Game Trailer">
+        <h2>Trailer</h2>
+        <div class="trailer-container">
+            <iframe 
+                src="https://www.youtube.com/embed/FnC6fTqJ81g?start=942&rel=0&showinfo=0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                title="Drop-Off Duty Trailer"
+            ></iframe>
+        </div>
+        <div class="youtube-link">
+            <a href="https://www.youtube.com/watch?v=FnC6fTqJ81g&t=942s" target="_blank" rel="noopener noreferrer" title="Open trailer on YouTube">▶ Watch on YouTube</a>
+        </div>
+    </section>
 
+    <!-- Global Technology Used Section -->
+    <div class="tech-used">
+        <h3 style="margin-top: 0;">Technology Used</h3>
+        <div class="tech-icons">
+            <img src="../images/icons/cpp.png" alt="C++" />
+            <img src="../images/icons/opengl.png" alt="OpenGL" />
+            <span class="tech-badge">GLSL</span>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="section engine-section">
             <h2>Graphics Engine</h2>
 
-            <div class="tech-used">
-                <h3 style="margin-top: 0;">Technology Used</h3>
-                <div class="tech-icons">
-                    <img src="../images/icons/cpp.png" alt="C++">
-                    <img src="../images/icons/opengl.png" alt="OpenGL">
-                    <span class="tech-badge">GLSL</span>
-                </div>
-            </div>
+            <!-- Tech used removed from here -->
 
             <div class="subsection">
                 <h3>Dynamic Lighting and Shadows</h3>
-                <p>Implemented real-time lighting including point, directional and spotlight sources with shadow mapping for dynamic elements.</p>
-                <img class="contribution-img" src="../images/dflt.png" alt="Light and shadows Screenshot">
+                <img class="contribution-img" src="../images/Drop-Off Duty/Lighting.png" alt="Light and shadows Screenshot" />
             </div>
 
             <div class="subsection">
                 <h3>Shaders and Visual Effects</h3>
-                <p>Developed custom GLSL shaders to simulate grass and water effects.</p>
-                <img class="contribution-img" src="../images/Drop-Off Duty/Grass.png" alt="Grass shader Screenshot">
-                <img class="contribution-img" src="../images/Drop-Off Duty/Water.gif" alt="Water shader Animation">
-                <img class="contribution-img" src="../images/Drop-Off Duty/Water2.gif" alt="Water shader Animation">
+
+                <div class="subsection">
+                    <h4>Grass</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Grass.png" alt="Grass shader Screenshot" />
+                </div>
+
+                <div class="subsection">
+                    <h4>Water</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Water.gif" alt="Water shader Animation" />
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Water2.gif" alt="Water shader Animation" />
+                </div>
             </div>
 
             <div class="subsection">
                 <h3>Deferred Shading</h3>
-                <p>Implemented deferred shading to optimize rendering and enable multiple dynamic lights efficiently.</p>
-                
                 <div class="g-buffer-grid">
                     <div class="g-buffer-item">
-                        <img src="../images/Drop-Off Duty/Deferred_color.png" alt="G-Buffer Color">
+                        <img src="../images/Drop-Off Duty/Deferred_color.png" alt="G-Buffer Color" />
                         <div class="g-buffer-label">Color</div>
                     </div>
                     <div class="g-buffer-item">
-                        <img src="../images/Drop-Off Duty/Deferred_normals.png" alt="G-Buffer Normals">
+                        <img src="../images/Drop-Off Duty/Deferred_normals.png" alt="G-Buffer Normals" />
                         <div class="g-buffer-label">Normals</div>
                     </div>
                     <div class="g-buffer-item">
-                        <img src="../images/Drop-Off Duty/Deferred_spec.png" alt="G-Buffer Specular">
+                        <img src="../images/Drop-Off Duty/Deferred_spec.png" alt="G-Buffer Specular" />
                         <div class="g-buffer-label">Specular</div>
                     </div>
                     <div class="g-buffer-item">
-                        <img src="../images/Drop-Off Duty/Deferred_emmisive.png" alt="G-Buffer Emmisive">
+                        <img src="../images/Drop-Off Duty/Deferred_emmisive.png" alt="G-Buffer Emmisive" />
                         <div class="g-buffer-label">Emmisive</div>
                     </div>
                     <div class="g-buffer-result" style="grid-column: span 2;">
-                        <img src="../images/Drop-Off Duty/Deferred_result.png" alt="Final Deferred Shading Result">
+                        <img src="../images/Drop-Off Duty/Deferred_result.png" alt="Final Deferred Shading Result" />
                         <div class="g-buffer-label">Final Combined Image</div>
                     </div>
                 </div>
 
-            <div class="subsection">
-                <h3>Post-processing Effects</h3>
-                
                 <div class="subsection">
-                    <h4>Bloom Effect</h4>
-                    <div class="image-slider-section">
-                        <div class="image-slider">
-                          <div class="slider-images">
-                            <img src="../images/Drop-Off Duty/Deferred_emmisive.png" class="slider-image base-image" alt="Base image">
-                            <div class="second-image-wrapper">
-                              <img src="../images/Drop-Off Duty/bloom.png" class="slider-image second-image" alt="Second image">
-                              <div class="slider-divider"></div>
+                    <h3>Post-processing Effects</h3>
+
+                    <div class="subsection">
+                        <h4>Bloom Effect</h4>
+                        <div class="image-slider-section">
+                            <div class="image-slider">
+                                <div class="slider-images">
+                                    <img src="../images/Drop-Off Duty/emissive.png" class="slider-image base-image" alt="Base image" />
+                                    <div class="second-image-wrapper">
+                                        <img src="../images/Drop-Off Duty/emissiveBlurred.png" class="slider-image second-image" alt="Second image" />
+                                        <div class="slider-divider"></div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
+                            <input type="range" class="slider-control" min="0" max="100" value="50" />
                         </div>
-                        <input type="range" class="slider-control" min="0" max="100" value="50">
+                        <div class="image-slider-section">
+                            <div class="image-slider">
+                                <div class="slider-images">
+                                    <img src="../images/Drop-Off Duty/finalImageNoBloom.png" class="slider-image base-image" alt="Base image" />
+                                    <div class="second-image-wrapper">
+                                        <img src="../images/Drop-Off Duty/finalImageBloom.png" class="slider-image second-image" alt="Second image" />
+                                        <div class="slider-divider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="range" class="slider-control" min="0" max="100" value="50" />
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h4>Screen space ambient occlusion (SSAO)</h4>
+                        <img class="contribution-img" src="../images/Drop-Off Duty/ssao.png" alt="SSAO Screenshot" />
+                    </div>
+
+                    <div class="subsection">
+                        <h4>Sun Effect</h4>
+                        <div class="image-slider-section">
+                            <div class="image-slider">
+                                <div class="slider-images">
+                                    <img src="../images/Drop-Off Duty/final_image.png" class="slider-image base-image" alt="Base image" />
+                                    <div class="second-image-wrapper">
+                                        <img src="../images/Drop-Off Duty/sun.png" class="slider-image second-image" alt="Second image" />
+                                        <div class="slider-divider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="range" class="slider-control" min="0" max="100" value="50" />
+                        </div>
                     </div>
                 </div>
-
-                <div class="subsection">
-                    <h4>Screen space ambient occlusion (SSAO)</h4>
-                    <img class="contribution-img" src="../images/Drop-Off Duty/ssao.png" alt="SSAO Screenshot">
-                </div>
-
-                <div class="subsection">
-                    <h4>Sun Effect</h4>
-                    <div class="image-slider-section">
-                        <div class="image-slider">
-                          <div class="slider-images">
-                            <img src="../images/Drop-Off Duty/final_image.png" class="slider-image base-image" alt="Base image">
-                            <div class="second-image-wrapper">
-                              <img src="../images/Drop-Off Duty/sun.png" class="slider-image second-image" alt="Second image">
-                              <div class="slider-divider"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <input type="range" class="slider-control" min="0" max="100" value="50">
-                    </div>
-                </div>
-
             </div>
-
         </div>
 
         <div class="back-link">
@@ -170,22 +247,20 @@
     </div>
 
     <script>
-        document.querySelectorAll('.image-slider-section').forEach(section => {
-          const slider = section.querySelector('.slider-control');
-          const overlay = section.querySelector('.second-image-wrapper');
-          const divider = overlay.querySelector('.slider-divider');
-      
-          const updateSlider = () => {
-            const value = slider.value;
-            overlay.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
-            divider.style.right = `${100 - value}%`;
-          };
-      
-          slider.addEventListener('input', updateSlider);
-          updateSlider(); // initialize
-        });
-      </script>
-      
+        document.querySelectorAll(".image-slider-section").forEach((section) => {
+            const slider = section.querySelector(".slider-control");
+            const overlay = section.querySelector(".second-image-wrapper");
+            const divider = overlay.querySelector(".slider-divider");
 
+            const updateSlider = () => {
+                const value = slider.value;
+                overlay.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+                divider.style.right = `${100 - value}%`;
+            };
+
+            slider.addEventListener("input", updateSlider);
+            updateSlider(); // initialize
+        });
+    </script>
 </body>
 </html>
