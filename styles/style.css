@@ -58,6 +58,11 @@ body {
     margin: 20px auto;
 }
 
+.tech-used h3 {
+    text-align: center;
+    margin: 20px auto;
+}
+
 ul {
     list-style-type: disc;
     padding-left: 20px;
