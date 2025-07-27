@@ -56,7 +56,6 @@
             color: #333;
         }
 
-        /* Trailer section styles */
         .trailer-section {
             max-width: 600px;
             margin: 30px auto;
@@ -186,76 +185,76 @@
                         <div class="g-buffer-label">Final Combined Image</div>
                     </div>
                 </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Particle System (Instance rendering)</h3>
+                <img class="contribution-img" src="../images/Drop-Off Duty/TerrainDetection.gif" alt="Terrain Detection Animation" />
+                <img class="contribution-img" src="../images/Drop-Off Duty/Particles.gif" alt="Particles Animation" />
+            </div>
+
+            <div class="subsection">
+                <h3>Optimizations</h3>
 
                 <div class="subsection">
-                    <h3>Particle System (Instance rendering)</h3>
-                    <img class="contribution-img" src="../images/Drop-Off Duty/TerrainDetection.gif" alt="Terrain Detection Animation" />
-                    <img class="contribution-img" src="../images/Drop-Off Duty/Particles.gif" alt="Particles Animation" />
+                    <h4>Frustum culling</h4>
                 </div>
 
                 <div class="subsection">
-                    <h3>Optimizations</h3>
+                    <h4>Bounding Volume Hierarchies</h4>
+                </div>
 
-                    <div class="subsection">
-                        <h4>Frustum culling</h4>
+            </div>
+
+            <div class="subsection">
+                <h3>Post-processing Effects</h3>
+
+                <div class="subsection">
+                    <h4>Bloom Effect</h4>
+                    <div class="image-slider-section">
+                        <div class="image-slider">
+                            <div class="slider-images">
+                                <img src="../images/Drop-Off Duty/emissive.png" class="slider-image base-image" alt="Base image" />
+                                <div class="second-image-wrapper">
+                                    <img src="../images/Drop-Off Duty/emissiveBlurred.png" class="slider-image second-image" alt="Second image" />
+                                    <div class="slider-divider"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="range" class="slider-control" min="0" max="100" value="50" />
                     </div>
-
-                    <div class="subsection">
-                        <h4>Bounding Volume Hierarchies</h4>
+                    <div class="image-slider-section">
+                        <div class="image-slider">
+                            <div class="slider-images">
+                                <img src="../images/Drop-Off Duty/finalImageNoBloom.png" class="slider-image base-image" alt="Base image" />
+                                <div class="second-image-wrapper">
+                                    <img src="../images/Drop-Off Duty/finalImageBloom.png" class="slider-image second-image" alt="Second image" />
+                                    <div class="slider-divider"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="range" class="slider-control" min="0" max="100" value="50" />
                     </div>
-
                 </div>
 
                 <div class="subsection">
-                    <h3>Post-processing Effects</h3>
+                    <h4>Screen space ambient occlusion (SSAO)</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/ssao.png" alt="SSAO Screenshot" />
+                </div>
 
-                    <div class="subsection">
-                        <h4>Bloom Effect</h4>
-                        <div class="image-slider-section">
-                            <div class="image-slider">
-                                <div class="slider-images">
-                                    <img src="../images/Drop-Off Duty/emissive.png" class="slider-image base-image" alt="Base image" />
-                                    <div class="second-image-wrapper">
-                                        <img src="../images/Drop-Off Duty/emissiveBlurred.png" class="slider-image second-image" alt="Second image" />
-                                        <div class="slider-divider"></div>
-                                    </div>
+                <div class="subsection">
+                    <h4>Sun Effect</h4>
+                    <div class="image-slider-section">
+                        <div class="image-slider">
+                            <div class="slider-images">
+                                <img src="../images/Drop-Off Duty/final_image.png" class="slider-image base-image" alt="Base image" />
+                                <div class="second-image-wrapper">
+                                    <img src="../images/Drop-Off Duty/sun.png" class="slider-image second-image" alt="Second image" />
+                                    <div class="slider-divider"></div>
                                 </div>
                             </div>
-                            <input type="range" class="slider-control" min="0" max="100" value="50" />
                         </div>
-                        <div class="image-slider-section">
-                            <div class="image-slider">
-                                <div class="slider-images">
-                                    <img src="../images/Drop-Off Duty/finalImageNoBloom.png" class="slider-image base-image" alt="Base image" />
-                                    <div class="second-image-wrapper">
-                                        <img src="../images/Drop-Off Duty/finalImageBloom.png" class="slider-image second-image" alt="Second image" />
-                                        <div class="slider-divider"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="range" class="slider-control" min="0" max="100" value="50" />
-                        </div>
-                    </div>
-
-                    <div class="subsection">
-                        <h4>Screen space ambient occlusion (SSAO)</h4>
-                        <img class="contribution-img" src="../images/Drop-Off Duty/ssao.png" alt="SSAO Screenshot" />
-                    </div>
-
-                    <div class="subsection">
-                        <h4>Sun Effect</h4>
-                        <div class="image-slider-section">
-                            <div class="image-slider">
-                                <div class="slider-images">
-                                    <img src="../images/Drop-Off Duty/final_image.png" class="slider-image base-image" alt="Base image" />
-                                    <div class="second-image-wrapper">
-                                        <img src="../images/Drop-Off Duty/sun.png" class="slider-image second-image" alt="Second image" />
-                                        <div class="slider-divider"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="range" class="slider-control" min="0" max="100" value="50" />
-                        </div>
+                        <input type="range" class="slider-control" min="0" max="100" value="50" />
                     </div>
                 </div>
             </div>
@@ -273,7 +272,6 @@
                 <h3>Options and pause menu</h3>
                 <img class="contribution-img" src="../images/Drop-Off Duty/Menu.gif" alt="Menu Animation" />
             </div>
-
         </div>
 
         <div class="section">
@@ -311,7 +309,6 @@
                     <h4>Bouncy</h4>
                     <img class="contribution-img" src="../images/Drop-Off Duty/Bouncy.gif" alt="Bouncy Animation" />
                 </div>
-
             </div>
 
             <div class="subsection">
@@ -326,27 +323,25 @@
                     <h4>Pick up destroyed vehicles</h4>
                     <img class="contribution-img" src="../images/Drop-Off Duty/Pick up.gif" alt="Pick up Animation" />
                 </div>
-
             </div>
 
             <div class="subsection">
                 <h3>Lauching pad</h3>
                 <img class="contribution-img" src="../images/Drop-Off Duty/LauchingPad1.gif" alt="Lauching pad Animation" />
-                                <img class="contribution-img" src="../images/Drop-Off Duty/LauchingPad2.gif" alt="Lauching pad Animation" />
+                <img class="contribution-img" src="../images/Drop-Off Duty/LauchingPad2.gif" alt="Lauching pad Animation" />
             </div>
 
             <div class="subsection">
                 <h3>Terrain detection</h3>
                 <img class="contribution-img" src="../images/Drop-Off Duty/TerrainDetection.gif" alt="Terrain Detection Animation" />
             </div>
-
         </div>
 
         <div class="back-link">
             <a href="../index.html">← Back to Portfolio</a>
         </div>
     </div>
-    
+
     <script>
         document.querySelectorAll(".image-slider-section").forEach((section) => {
             const slider = section.querySelector(".slider-control");
@@ -360,7 +355,7 @@
             };
 
             slider.addEventListener("input", updateSlider);
-            updateSlider(); // initialize
+            updateSlider();
         });
     </script>
 </body>
