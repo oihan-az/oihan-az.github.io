@@ -109,7 +109,6 @@
         <p>3D time trial driving and shooting video game.</p>
     </div>
 
-    <!-- Trailer Section -->
     <section class="trailer-section" aria-label="Game Trailer">
         <h2>Trailer</h2>
         <div class="trailer-container">
@@ -125,7 +124,6 @@
         </div>
     </section>
 
-    <!-- Global Technology Used Section -->
     <div class="tech-used">
         <h3 style="margin-top: 0;">Technology Used</h3>
         <div class="tech-icons">
@@ -136,10 +134,8 @@
     </div>
 
     <div class="container">
-        <div class="section engine-section">
+        <div class="section">
             <h2>Graphics Engine</h2>
-
-            <!-- Tech used removed from here -->
 
             <div class="subsection">
                 <h3>Dynamic Lighting and Shadows</h3>
@@ -158,6 +154,11 @@
                     <h4>Water</h4>
                     <img class="contribution-img" src="../images/Drop-Off Duty/Water.gif" alt="Water shader Animation" />
                     <img class="contribution-img" src="../images/Drop-Off Duty/Water2.gif" alt="Water shader Animation" />
+                </div>
+
+                <div class="subsection">
+                    <h4>Light beam</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Light Beam.gif" alt="Light beam Animation" />
                 </div>
             </div>
 
@@ -184,6 +185,25 @@
                         <img src="../images/Drop-Off Duty/Deferred_result.png" alt="Final Deferred Shading Result" />
                         <div class="g-buffer-label">Final Combined Image</div>
                     </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Particle System (Instance rendering)</h3>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/TerrainDetection.gif" alt="Terrain Detection Animation" />
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Particles.gif" alt="Particles Animation" />
+                </div>
+
+                <div class="subsection">
+                    <h3>Optimizations</h3>
+
+                    <div class="subsection">
+                        <h4>Frustum culling</h4>
+                    </div>
+
+                    <div class="subsection">
+                        <h4>Bounding Volume Hierarchies</h4>
+                    </div>
+
                 </div>
 
                 <div class="subsection">
@@ -241,11 +261,92 @@
             </div>
         </div>
 
+        <div class="section">
+            <h2>UI</h2>
+
+            <div class="subsection">
+                <h3>Map/Minimap</h3>
+                <img class="contribution-img" src="../images/Drop-Off Duty/Map.gif" alt="Map Animation" />
+            </div>
+
+            <div class="subsection">
+                <h3>Options and pause menu</h3>
+                <img class="contribution-img" src="../images/Drop-Off Duty/Menu.gif" alt="Menu Animation" />
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>Gameplay</h2>
+
+            <div class="subsection">
+                <h3>Skid marks</h3>
+                <img class="contribution-img" src="../images/Drop-Off Duty/SkidMarks.gif" alt="SkidMarks Animation" />
+            </div>
+
+            <div class="subsection">
+                <h3>Trajectory</h3>
+                <img class="contribution-img" src="../images/Drop-Off Duty/Trajectory.gif" alt="Trajectory Animation" />
+            </div>
+
+            <div class="subsection">
+                <h3>Package types</h3>
+
+                <div class="subsection">
+                    <h4>Default</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Default.gif" alt="Default Animation" />
+                </div>
+
+                <div class="subsection">
+                    <h4>Rocket</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Rocket.gif" alt="Rocket Animation" />
+                </div>
+
+                <div class="subsection">
+                    <h4>Cannon ball</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Cannon ball.gif" alt="Cannon ball Animation" />
+                </div>
+
+                <div class="subsection">
+                    <h4>Bouncy</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Bouncy.gif" alt="Bouncy Animation" />
+                </div>
+
+            </div>
+
+            <div class="subsection">
+                <h3>UFO</h3>
+
+                <div class="subsection">
+                    <h4>Player respawn</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Player respawn.gif" alt="Player respawn Animation" />
+                </div>
+
+                <div class="subsection">
+                    <h4>Pick up destroyed vehicles</h4>
+                    <img class="contribution-img" src="../images/Drop-Off Duty/Pick up.gif" alt="Pick up Animation" />
+                </div>
+
+            </div>
+
+            <div class="subsection">
+                <h3>Lauching pad</h3>
+                <img class="contribution-img" src="../images/Drop-Off Duty/LauchingPad1.gif" alt="Lauching pad Animation" />
+                                <img class="contribution-img" src="../images/Drop-Off Duty/LauchingPad2.gif" alt="Lauching pad Animation" />
+            </div>
+
+            <div class="subsection">
+                <h3>Terrain detection</h3>
+                <img class="contribution-img" src="../images/Drop-Off Duty/TerrainDetection.gif" alt="Terrain Detection Animation" />
+            </div>
+
+        </div>
+
         <div class="back-link">
             <a href="../index.html">← Back to Portfolio</a>
         </div>
     </div>
-
+    
     <script>
         document.querySelectorAll(".image-slider-section").forEach((section) => {
             const slider = section.querySelector(".slider-control");
