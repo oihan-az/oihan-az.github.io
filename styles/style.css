@@ -87,9 +87,11 @@ body {
 }
 
 .tech-used img.team-logo {
+    display: block;
+    margin: 0 auto 10px auto;
     height: 80px;
-    width: auto;
-    margin-bottom: 10px;
+    width: auto; 
+    max-width: 100%;
 }
 
 ul {
