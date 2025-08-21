@@ -21,17 +21,17 @@ const projectsData = {
       {
         "title": "Side channel trace viewer",
         "link": "src/side-channel-trace-viewer.html",
-        "image": "images/dflt.png"
+        "image": "images/SideChannelTraceViewer/SideChannelTraceViewer.png",
       },
       {
         "title": "Acceleration data structures",
         "link": "src/acc-structs.html",
-        "image": "images/dflt.png"
+        "image": "images/AccStructs/AccDataStructs.png",
       },
       {
         "title": "Model inspector (Vulkan)",
         "link": "src/model-inspector.html",
-        "image": "images/dflt.png",
+        "image": "images/ModelInspector/ModelInspector.png",
         "wip": true
       }
     ],
@@ -56,7 +56,7 @@ const projectsData = {
       {
         "title": "Crowd Simulation",
         "link": "src/crowd-simulation.html",
-        "image": "images/dflt.png",
+        "image": "images/CrowdSim/Logo.png",
         "description": "Real-time crowd simulation in Unreal Engine featuring collision avoidance and density awareness."
       },],
     "Others": []
