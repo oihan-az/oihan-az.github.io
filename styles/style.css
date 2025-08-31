@@ -292,6 +292,18 @@ img.contribution-img {
 }
 
 .youtube-link a:hover,
-.youtube-link a:focus {
+.youtube-link a:focus 
+{
     text-decoration: underline;
+}
+
+.pdf-viewer 
+{
+    width: 800px;
+    height: 600px;
+    max-width: 80%;
+    max-height: 80vh;
+    border: 6px solid black;
+    display: block;
+    margin: 20px auto;
 }
