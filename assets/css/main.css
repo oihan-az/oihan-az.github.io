@@ -1120,6 +1120,11 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+
+.portfolio-details.section {
+  padding: 20px 0;
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1175,6 +1180,41 @@ section,
 
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.image-hover-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+
+.swiper-slide:hover .image-hover-title {
+  opacity: 1;
+}
+
+.slider-section-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: left;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  z-index: 10;
+  border-bottom-right-radius: 4px;
 }
 
 .portfolio-details .portfolio-info h3 {
