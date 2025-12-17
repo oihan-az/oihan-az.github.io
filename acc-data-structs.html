@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>CPU Ray Tracer & Photon Mapper</title>
+  <title>Acceleration Data Structures</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,20 +26,11 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
 
   <header id="header" class="header d-flex flex-column justify-content-center">
-
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <nav id="navmenu" class="navmenu">
@@ -58,16 +49,15 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">CPU Ray Tracer & Photon Mapper</li>
+            <li class="current">Acceleration Data Structures</li>
           </ol>
         </nav>
-        <h1>CPU Ray Tracer & Photon Mapper</h1>
+        <h1>Acceleration Data Structures</h1>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
-
       <div class="container" data-aos="fade-up">
 
         <div class="portfolio-details-slider swiper init-swiper">
@@ -90,59 +80,41 @@
           </script>
           <div class="swiper-wrapper align-items-center">
 
-            <!-- Ray tracing -->
+            <!-- BVH -->
             <div class="swiper-slide">
-              <img src="assets/images/RayTracerCPU/FinalRender_MonteCarlo.png" class="image-small" alt="">
+              <img src="assets/images/AccStructs/BVH_Full.png" class="image-small" alt="BVH Full">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/AccStructs/BVH_0.png" class="image-small" alt="BVH 0">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/AccStructs/BVH_1.png" class="image-small" alt="BVH 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/AccStructs/BVH_2.png" class="image-small" alt="BVH 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/AccStructs/BVH_3.png" class="image-small" alt="BVH 3">
             </div>
 
+            <!-- Octree -->
             <div class="swiper-slide">
-              <img src="assets/images/RayTracerCPU/A4_Suzanne_s100.png" class="image-small" alt="">
+              <img src="assets/images/AccStructs/Octree_off.png" class="image-small" alt="Octree Off">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/AccStructs/Octree_off_collisions.png" class="image-small" alt="Octree Off Collisions">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/AccStructs/Octree_on.png" class="image-small" alt="Octree On">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/AccStructs/Octree_on_collisions.png" class="image-small" alt="Octree On Collisions">
             </div>
 
+            <!-- Uniform Grid -->
             <div class="swiper-slide">
-              <img src="assets/images/RayTracerCPU/A4_Box_Transmission_s100.png" class="image-small" alt="">
+              <img src="assets/images/AccStructs/UniformGrid.png" class="image-small" alt="Uniform Grid">
             </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/RayTracerCPU/A4_BunnyGlass_Transmission_s500.png" class="image-small" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/RayTracerCPU/A3_Box_r0.25_s100.png" class="image-small" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/RayTracerCPU/A3_s100.png" class="image-small" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/RayTracerCPU/A2_Box_s100.png" class="image-small" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/RayTracerCPU/A2_s100.png" class="image-small" alt="">
-            </div>
-
-            <!-- Photon Mapping -->
-             <div class="swiper-slide">
-               <img src="assets/images/RayTracerCPU/PhotonMapping/WaterBox.png" class="image-small" alt="">
-             </div>
-             
-             <div class="swiper-slide">
-               <img src="assets/images/RayTracerCPU/PhotonMapping/FinalRender.png" class="image-small" alt="">
-             </div>
-             
-             <div class="swiper-slide">
-               <img src="assets/images/RayTracerCPU/PhotonMapping/ConeFilter_K_1.png" class="image-small" alt="">
-             </div>
-             
-             <div class="swiper-slide">
-               <img src="assets/images/RayTracerCPU/PhotonMapping/dragon.png" class="image-small" alt="">
-             </div>
-             
-             <div class="swiper-slide">
-               <img src="assets/images/RayTracerCPU/PhotonMapping/Egg_ior_1.1.png" class="image-small" alt="">
-             </div>
 
           </div>
           <div class="swiper-button-prev"></div>
@@ -154,16 +126,14 @@
 
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
-            <h2>CPU Ray Tracer & Photon Mapper</h2> 
-            <p>
-              This project is a <strong>physically based offline renderer</strong> developed entirely in C++ and executed on the CPU. It allows the user to choose between classic <strong>Monte Carlo</strong> ray tracing and a solution based on <strong>Photon Mapping</strong>.
-            </p>
-            <p>
-              The renderer focuses on correctness, flexibility, and extensibility, supporting realistic lighting, soft shadows, caustics, and complex material interactions while maintaining a clean and modular architecture.
-            </p>
-            <p>
-              Additionally, a <strong>KD-Tree</strong> was implemented using <strong>Surface Area Heuristics</strong> (SAH) to accelerate ray-object intersection tests for complex scenes.
-            </p>
+              <h2>Acceleration Data Structures</h2>
+              <p>This project implements multiple acceleration data structures for efficient scene rendering, ray intersection, and collision detection:</p>
+              <ul>
+                <li><strong>Uniform Grid:</strong> Subdivides space into uniform grids of the same size.</li>
+                <li><strong>Bounding Volume Hierarchies (BVH):</strong> Hierarchical structures where objects are encapsulated in bounding volumes, and these volumes are recursively grouped into a hierarchy. Mainly used in static scenes.</li>
+                <li><strong>Octree:</strong> Hierarchical subdivision for dynamic scenes, where each cell is represented using a location code as a hash. Works efficiently in dynamic environments.</li>
+              </ul>
+              <p>These data structures combine computer graphics and physics techniques to optimize rendering and real-time interaction with both static and dynamic scenes.</p>
             </div>
           </div>
 
@@ -171,8 +141,8 @@
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong> Computer Graphics</li>
-                <li><strong>Project date</strong> November, 2025</li>
+                <li><strong>Category</strong> Computer Graphics, Physics</li>
+                <li><strong>Project date</strong> January, 2024 - April, 2024</li>
 
                 <!-- Tech Used -->
                 <li>
@@ -182,11 +152,6 @@
                   </div>
                 </li>
 
-                <!-- Project Paper Button -->
-                <li>
-                  <a href="assets/docs/RayTracerCPU/Report.pdf" target="_blank" class="btn-visit align-self-start">View Paper</a>
-                </li>
-
               </ul>
             </div>
           </div>
@@ -194,7 +159,6 @@
         </div>
 
       </div>
-
     </section><!-- /Portfolio Details Section -->
 
   </main>
