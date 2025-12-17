@@ -854,9 +854,18 @@ section,
 
 .portfolio-details-slider .swiper-slide img {
   width: 100%;
-  height: 100%;      /* fill the slide container */
-  object-fit: cover;  /* cover area without distortion */
+  height: 100%;
+  object-fit: cover;
   display: block;
+}
+
+.portfolio-details-slider .swiper-slide img.image-small {
+  height: 500px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------------

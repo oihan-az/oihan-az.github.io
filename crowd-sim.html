@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Crowd Simulation</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/images/icons/favicon.png" rel="icon">
+  <link href="assets/images/icons/favicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#demo"><i class="bi bi-play-circle navicon"></i><span>Demo</span></a></li>
+        <li><a href="#simulation-engine"><i class="bi bi-cpu navicon"></i><span>Simulation Engine</span></a></li>
+        <li><a href="#tools"><i class="bi bi-terminal navicon"></i><span>Tools</span></a></li>
+        <li><a href="#visuals"><i class="bi bi-image navicon"></i><span>Visuals</span></a></li>
+        <li><a href="#algorithms"><i class="bi bi-diagram-3 navicon"></i><span>Algorithms</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Crowd Simulation</li>
+          </ol>
+        </nav>
+        <h1>Crowd Simulation</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": { "delay": 5000 },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/WarpDriver.png" class="image-small" alt="Warp Driver">
+            </div>
+        
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/Combination.png" class="image-small" alt="Combination of Agents">
+            </div>
+        
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/Avoidance.png" class="image-small" alt="Collision Avoidance">
+            </div>
+        
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/Density.png" class="image-small" alt="Density Field">
+            </div>
+        
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/Density2.png" class="image-small" alt="Density Field 2">
+            </div>
+        
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/DenseEllip.png" class="image-small" alt="Dense Ellipsoid">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Crowd Simulation</h2>
+              <p>
+                This project is a <strong>real-time crowd simulation system</strong> developed in C++ and Unreal Engine. It focuses on realistic agent navigation and interaction in dense environments.
+              </p>
+              <p>
+                My contribution implements collision avoidance using a probabilistic approach. Collision probability fields combined with density awareness dynamically correct agents’ preferred velocities, resulting in smoother motion, reduced oscillations, and more realistic crowd behavior in high-density scenarios.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Simulation / AI</li>
+                <li><strong>Project date</strong> May, 2025 - July, 2025</li>
+
+                <!-- Tech Used -->
+                <li>
+                  <strong>Tech Used</strong>
+                  <div class="tech-icons">
+                    <img src="assets/images/icons/cpp.png" alt="C++" class="skill-icon">
+                    <img src="assets/images/icons/ue.png" alt="Unreal Engine" class="skill-icon">
+                  </div>
+                </li>
+
+                <li><strong>Team</strong> 4 programmers</li>
+
+                <!-- Project Paper Button -->
+                <li>
+                  <a href="assets/docs/CrowdSim/Paper.pdf" target="_blank" class="btn-visit align-self-start">View Paper</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+    <!-- ===== Probability-based Collision Avoidance Section ===== --> 
+    <section id="collision-avoidance" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <h2>Probability-based collision avoidance</h2>
+        <p>Each agent dynamically adjusts its trajectory based on a probabilistic collision field computed from nearby agents and static obstacles. The system evaluates collision likelihood and local density to determine velocity corrections, ensuring smooth and realistic crowd navigation.</p>
+
+        <div class="portfolio-details-slider swiper init-swiper mt-3">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": { "delay": 5000 },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/Circle WarpDriver.gif" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/Fork WarpDriver.gif" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/NYGrandCentral WarpDriver.gif" alt="">
+            </div>
+        
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/Queue WarpDriver.gif" alt="">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Density Awareness Section ===== --> 
+    <section id="density-awareness" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <h2>Density awareness</h2>
+        <p>Agents adjust their preferred velocity by sampling multiple candidate velocities around the original preferred velocity. Each candidate is evaluated based on the local density of nearby agents, and the agent selects the velocity that best balances motion efficiency and collision avoidance in dense scenarios.</p>
+
+        <div class="portfolio-details-slider swiper init-swiper mt-3">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": { "delay": 5000 },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="assets/images/CrowdSim/DenseSense.gif" alt="Density Field">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Oihan Abruña</h3>
+      <p>What we do now echoes in eternity.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://instagram.com/oihan.az"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/in/oihan-abruña"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/oihan-az"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
