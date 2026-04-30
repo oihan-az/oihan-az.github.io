@@ -97,7 +97,31 @@
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Lighting.png" alt="">
+              <img src="assets/images/Drop-Off Duty/Lighting.webp" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Drop-Off Duty/ssao2_final.webp" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Drop-Off Duty/Grass.webp" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Drop-Off Duty/Grass2.webp" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Drop-Off Duty/Light.webp" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Drop-Off Duty/BVHDisabled.webp" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Drop-Off Duty/BVH.webp" alt="">
             </div>
 
           </div>
@@ -108,17 +132,44 @@
 
         <div class="row justify-content-between gy-4 mt-4">
 
-          <div class="col-lg-8" data-aos="fade-up">
-            <div class="portfolio-description">
-              <h2>Drop-Off Duty</h2>
-              <p>
-                <strong>Drop-Off Duty</strong> is a 3D time-trial driving and shooting video game focused on fast-paced action and precise control. Players must complete high-speed delivery challenges while avoiding obstacles along the route, balancing speed and shooting to achieve the best times.
-              </p>
-              <p>
-                Built with a custom graphics engine, Drop-Off Duty blends arcade driving with dynamic visuals and reactive environments. The project emphasizes gameplay fluidity, stylish effects, and a competitive experience for players.
-              </p>
-            </div>
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="portfolio-description">
+            <h2>Drop-Off Duty</h2>
+        
+            <p>
+              <strong>Drop-Off Duty</strong> is a 3D time-trial driving and shooting game focused on fast-paced gameplay, precise vehicle control, and reactive environmental challenges. The player must complete high-speed delivery routes while avoiding obstacles to achieve optimal completion times.
+            </p>
+        
+            <p>
+              In this project, I worked as the <strong>graphics programmer</strong>, focusing on the rendering architecture and real-time visual systems. The engine was extended with advanced rendering techniques to support a stylized but performant visual experience.
+            </p>
+        
+            <h4>Rendering Pipeline</h4>
+        
+            <p>
+              The project features a <strong>deferred rendering pipeline</strong>, enabling efficient lighting of complex scenes with multiple dynamic light sources. This approach allowed for improved scalability and consistent visual quality during fast-paced gameplay.
+            </p>
+        
+            <h4>Post-Processing Effects</h4>
+        
+            <p>
+              A set of post-processing techniques was implemented to enhance visual fidelity, including <strong>screen-space ambient occlusion (SSAO)</strong> and <strong>bloom</strong>.
+            </p>
+        
+            <h4>Advanced Shading Systems</h4>
+        
+            <p>
+              Several custom shaders were developed to enrich the environment, including a <strong>volumetric grass system using shell rendering</strong> and a <strong>water surface shader</strong>.
+            </p>
+        
+            <h4>Optimization & Scene Management</h4>
+        
+            <p>
+              To improve rendering and physics performance, a <strong>Bounding Volume Hierarchy (BVH)</strong> was implemented. This structure was used for efficient frustum culling and accelerated physics queries, significantly reducing computational overhead in complex scenes.
+            </p>
+        
           </div>
+        </div>
 
           <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100"> 
             <div class="portfolio-info">
@@ -139,11 +190,7 @@
                 <!-- Team -->
                 <li><strong>Team</strong> 5 programmers</li>
             
-                <li><strong>Project URL</strong> <a href="https://github.com/oihan-az">github.com/oihan-az</a></li>
-
-                <li>
-                  <a href="https://github.com/oihan-az" class="btn-visit align-self-start">Visit Website</a>
-                </li>
+                <li><strong>Project URL</strong> <a href="https://www.digipen.es/showcase/student-games/drop-off-duty">Visit Digipen game showcase</a></li>
               </ul>
             </div>
           </div>
@@ -153,335 +200,6 @@
       </div>
 
     </section><!-- /Portfolio Details Section -->
-
-    <!-- ===== Trailer Section ===== -->
-    <section id="trailer" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <h2>Trailer</h2>
-        <p>Watch the official trailer for <strong>Drop-Off Duty</strong> to experience the high-speed action and visual intensity of the game.</p>
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/FnC6fTqJ81g?start=942&rel=0&showinfo=0" referrerPolicy="strict-origin-when-cross-origin" title="Drop-Off Duty Trailer" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Graphics Engine Section ===== -->
-    <section id="graphics-engine" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <h2>Graphics Engine</h2>
-        <p>The graphics engine behind <strong>Drop-Off Duty</strong> supports custom shaders, advanced deferred shading and post-proccesing effects. It also features an instance rendered particle system.</p>
-
-        <div class="portfolio-details-slider swiper init-swiper mt-4 position-relative">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Lighting.png" alt="">
-              <div class="image-hover-title">Lighting</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Grass.png" alt="">
-              <div class="image-hover-title">Grass</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Water.gif" alt="">
-              <div class="image-hover-title">Water</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Water2.gif" alt="">
-              <div class="image-hover-title">Water</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Light Beam.gif" alt="">
-              <div class="image-hover-title">Light Beam</div>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="portfolio-details-slider swiper init-swiper mt-3">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/final_image.png" alt="">
-              <div class="image-hover-title">Deferred Shading</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Deferred_color.png" alt="">
-              <div class="image-hover-title">Unlit</div>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="portfolio-details-slider swiper init-swiper mt-3">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/finalImageBloom.png" alt="">
-              <div class="image-hover-title">Bloom</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/ssao.png" alt="">
-              <div class="image-hover-title">SSAO</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/sun.png" alt="">
-              <div class="image-hover-title">Sun Effect</div>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="portfolio-details-slider swiper init-swiper mt-3">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Particles.gif" alt="">
-              <div class="image-hover-title">Particles</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/TerrainDetection.gif" alt="">
-              <div class="image-hover-title">Dynamic Particles</div>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== UI Section ===== -->
-    <section id="ui" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <h2>User Interface (UI)</h2>
-        <p>The UI for Drop-Off Duty was designed to be intuitive and responsive, providing quick access to critical information such as time, position, and goals.</p>
-
-        <div class="portfolio-details-slider swiper init-swiper mt-3">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Map.gif" alt="">
-              <div class="image-hover-title">Map/Minimap</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Menu.gif" alt="">
-              <div class="image-hover-title">Pause Menu</div>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== Visuals Section ===== -->
-    <section id="visuals" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <h2>Visuals</h2>
-        <p>The visuals highlight the skid marks left by the car and the trajectory of the package, giving clear feedback on movement and gameplay dynamics.</p>
-
-        <div class="portfolio-details-slider swiper init-swiper mt-3">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/SkidMarks.gif" alt="">
-              <div class="image-hover-title">Skid Marks</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Trajectory.gif" alt="">
-              <div class="image-hover-title">Trajectory</div>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== Gameplay Section ===== -->
-    <section id="gameplay" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <h2>Gameplay</h2>
-        <p>Gameplay combines time-trial racing with shooting mechanics. Players must balance offensive tactics and driving precision to succeed in missions under strict time constraints.</p>
-
-        <div class="portfolio-details-slider swiper init-swiper mt-3">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Player respawn.gif" alt="">
-              <div class="image-hover-title">Player Respawn</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/Pick up.gif" alt="">
-              <div class="image-hover-title">Pick up destroyed vehicles</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/LauchingPad2.gif" alt="">
-              <div class="image-hover-title">Lauching Pad</div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/images/Drop-Off Duty/TerrainDetection.gif" alt="">
-              <div class="image-hover-title">Terrain Detection</div>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section>
 
   </main>
 
