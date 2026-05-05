@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Infinite Ocean Surface</title>
+  <title>Deferred Rendering Engine</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,10 +58,10 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Infinite Ocean Surface</li>
+            <li class="current">Deferred Rendering Engine</li>
           </ol>
         </nav>
-        <h1>Infinite Ocean Surface</h1>
+        <h1>Deferred Rendering Engine</h1>
       </div>
     </div><!-- End Page Title -->
 
@@ -92,43 +92,43 @@
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/ship_comp.webp" class="image-small" alt="Underwater Enhancements">
+              <img src="assets/images/DeferredEngine/Deferred.webp" class="image-small" alt="Deferred">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/realistic_far_view.webp" class="image-small" alt="Underwater Enhancements">
+              <img src="assets/images/DeferredEngine/Shaded.webp" class="image-small" alt="Shaded">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/realistic.webp" class="image-small" alt="Underwater Enhancements">
+              <img src="assets/images/DeferredEngine/CascadedShadows.webp" class="image-small" alt="CascadedShadows">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/all_enhancements.webp" class="image-small" alt="All Enhancements">
+              <img src="assets/images/DeferredEngine/Cascades.webp" class="image-small" alt="Cascades">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/all_enhancements_above_water_under_water.webp" class="image-small" alt="Above and Under Water Enhancements">
+              <img src="assets/images/DeferredEngine/Decals.webp" class="image-small" alt="Decals">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/all_enhancements_under_water_under_water.webp" class="image-small" alt="Underwater Enhancements">
+              <img src="assets/images/DeferredEngine/DecalsProj.webp" class="image-small" alt="Decals">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/preset_calm_morning.webp" class="image-small" alt="Calm Morning Preset">
+              <img src="assets/images/DeferredEngine/AO_Shaded.webp" class="image-small" alt="AO_Shaded">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/preset_stormy_night.webp" class="image-small" alt="Stormy Night Preset">
+              <img src="assets/images/DeferredEngine/AO.webp" class="image-small" alt="AO">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/displacementMap.webp" class="image-small" alt="Stormy Night Preset">
+              <img src="assets/images/DeferredEngine/Bloom.webp" class="image-small" alt="Bloom">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/InfiniteOcean/normalMap.webp" class="image-small" alt="Stormy Night Preset">
+              <img src="assets/images/DeferredEngine/Bloom_Shaded.webp" class="image-small" alt="Bloom_Shaded">
             </div>
 
           </div>
@@ -143,33 +143,45 @@
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
 
-              <h2>Infinite Ocean Surface</h2>
-
-              <p>
-                This project is a real-time ocean rendering system that focuses on achieving an infinite, dynamic ocean surface while maintaining interactive performance.
-              </p>
-
-              <p>
-                By combining adaptive mesh resolution with procedural wave synthesis, the system achieves a highly scalable and visually convincing infinite ocean simulation suitable for real-time applications.
-              </p>
-
-              <h4>Ocean mesh - Projected grid</h4>
-
-              <p>
-                To handle large-scale environments efficiently, a <strong>projected grid method</strong> is used. The mesh increases vertex density near the viewer while it reduces detail at greater distances. This ensures both visual fidelity and real-time performance.
-              </p>
-
-              <h4>Procedural wave texture generation</h4>
-
-              <p>
-                Wave motion is represented by using a <strong>procedural wave generation system</strong> that creates tileable, reusable wave patterns. These patterns are evaluated over a small domain and reused across the entire surface, enabling complex and continuous ocean motion at minimal computational cost.
-              </p>
-
-              <h4>Visual Enhancements</h4>
-
-              <p>
-                To further improve realism, several rendering enhancements were introduced. These include atmospheric effects, improved water shading, and support for both above water and underwater camera perspectives.
-              </p>
+            <h2>Deferred Rendering Engine</h2>
+                    
+            <p>
+              This project is a real-time deferred rendering pipeline focused on efficiently handling multiple dynamic light sources.
+            </p>
+        
+            <p>
+              The system combines modern rendering techniques such as deferred shading, advanced shadow mapping, and screen-space post-processing to produce a visually rich and performant graphics pipeline.
+            </p>
+        
+            <h4>Deferred Shading Pipeline</h4>
+        
+            <p>
+              The renderer is built around a <strong>deferred shading architecture</strong>, separating geometry processing from lighting calculations. This allows the system to efficiently handle multiple lights without the traditional performance cost of forward rendering.
+            </p>
+        
+            <h4>Light Volume Optimization</h4>
+        
+            <p>
+              Point lights are optimized using a <strong>light volume approach</strong>, where lighting is computed only for fragments inside each light’s influence volume. This significantly reduces unnecessary shading computations and improves performance in complex scenes.
+            </p>
+        
+            <h4>Cascaded Shadow Mapping</h4>
+        
+            <p>
+              High-quality directional shadows are achieved through <strong>cascaded shadow maps</strong>, which divide the camera view into multiple depth ranges. This ensures sharp and stable shadow detail across both near and far view distances.
+            </p>
+        
+            <h4>Decals and Surface Detail</h4>
+        
+            <p>
+              A flexible <strong>decal system</strong> was implemented to project surface details such as damage, markings, and environmental effects directly onto geometry without modifying the underlying mesh.
+            </p>
+        
+            <h4>Post-Processing Effects</h4>
+        
+            <p>
+              To enhance visual quality, the pipeline integrates <strong>Alchemy Ambient Occlusion (AO)</strong> and <strong>bloom</strong> post-processing effects, improving depth perception and overall image richness.
+            </p>
 
             </div>
           </div>
@@ -180,7 +192,7 @@
               <ul>
 
                 <li><strong>Category</strong> Computer Graphics</li>
-                <li><strong>Project date</strong> March, 2026 - April, 2026</li>
+                <li><strong>Project date</strong> January, 2026 - April, 2026</li>
 
                 <!-- Tech Used -->
                 <li>
@@ -201,11 +213,6 @@
                   </span>
                 </li>
 
-                <!-- Project Paper Button -->
-                <li>
-                  <a href="assets/docs/InfiniteOcean/Report.pdf" target="_blank" class="btn-visit align-self-start">View Paper</a>
-                </li>
-
               </ul>
             </div>
           </div>
@@ -215,46 +222,6 @@
       </div>
 
     </section><!-- /Portfolio Details Section -->
-
-    <!-- ===== Simulation Section ===== --> 
-    <section id="collision-avoidance" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <h2>Simulation</h2>
-
-        <div class="portfolio-details-slider swiper init-swiper mt-3">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="assets/images/InfiniteOcean/Animation.webm" type="video/webm">
-              </video>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section>
 
   </main>
 
