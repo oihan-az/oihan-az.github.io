@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CHIP-8 Emulator</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/images/icons/favicon.png" rel="icon">
+  <link href="assets/images/icons/favicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#overview"><i class="bi bi-house-door navicon"></i><span>Overview</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">CHIP-8 Emulator</li>
+          </ol>
+        </nav>
+        <h1>CHIP-8 Emulator</h1>
+      </div>
+    </div>
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": { "delay": 5000 },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper align-items-center">
+
+            <!-- Emulator -->
+            <div class="swiper-slide">
+              <img src="assets/images/Chip8/Chip8_Game.png" class="image-small" alt="CHIP-8 Game">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Chip8/Chip8_TestSuite.png" class="image-small" alt="CHIP-8 Test Suite">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Chip8/Chip8_Disassembler.png" class="image-small" alt="CHIP-8 Disassembler">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Chip8/Chip8_Sprites.png" class="image-small" alt="Sprite Rendering">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Chip8/Chip8_Debug.png" class="image-small" alt="Debug View">
+            </div>
+
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>CHIP-8 Emulator</h2>
+
+              <p>
+                This project consists of the implementation of a complete CHIP-8 emulator and
+                disassembler in C++. The goal was to accurately reproduce the behavior of the
+                original CHIP-8 virtual machine, including graphics, input handling, timers,
+                sound generation and instruction execution.
+              </p>
+
+              <ul>
+                <li>
+                  <strong>Disassembler:</strong>
+                  Loads .ch8 ROM files, decodes 16-bit big-endian opcodes and generates their
+                  corresponding CHIP-8 assembly representation.
+                </li>
+
+                <li>
+                  <strong>SDL2 Host Layer:</strong>
+                  Provides a monochrome 64x32 display, keyboard input mapping for all 16 CHIP-8
+                  keys and support for sound playback through the system speaker.
+                </li>
+
+                <li>
+                  <strong>CPU Emulation:</strong>
+                  Implements the full CHIP-8 instruction set, including memory management,
+                  registers, stack operations, timers, jumps, arithmetic operations and input instructions.
+                </li>
+
+                <li>
+                  <strong>Graphics System:</strong>
+                  Supports sprite rendering using XOR drawing, collision detection through the VF
+                  register and screen wrapping behavior matching the original hardware.
+                </li>
+
+                <li>
+                  <strong>Testing:</strong>
+                  Verified using the Timendus CHIP-8 Test Suite to ensure correct opcode behavior
+                  and compatibility with existing ROMs.
+                </li>
+
+                <li>
+                  <strong>Playable Games:</strong>
+                  The final emulator successfully runs multiple CHIP-8 games with functional
+                  graphics, sound, controls and gameplay logic.
+                </li>
+              </ul>
+
+              <p>
+                This project provided practical experience in hardware emulation, instruction
+                decoding, low-level memory management, timing systems and graphics programming
+                while recreating the behavior of a classic virtual machine from the late 1970s.
+              </p>
+
+              <h3>CHIP-8 Specifications</h3>
+
+<ul>
+  <li><strong>Memory:</strong> 4KB RAM and a stack supporting nested subroutine calls.</li>
+  <li><strong>Registers:</strong> Program Counter (PC), Index Register (I), and 16 general-purpose registers (V0-VF).</li>
+  <li><strong>Display:</strong> 64×32 monochrome framebuffer.</li>
+  <li><strong>Timers:</strong> Delay Timer (DT) and Sound Timer (ST), both running at 60Hz.</li>
+  <li><strong>Input:</strong> 16-key hexadecimal keypad mapped to the keyboard.</li>
+</ul>
+
+<h3>Instruction Set</h3>
+
+<p>
+  The emulator implements the complete CHIP-8 instruction set, including flow
+  control, arithmetic operations, memory access, timers, sprite rendering,
+  keyboard input and random number generation.
+</p>
+
+<p>
+  All instructions are 16-bit opcodes decoded at runtime and executed according
+  to the original CHIP-8 specification. Unknown instructions are reported as
+  invalid opcodes during emulation.
+</p>
+
+<h3>Validation & Testing</h3>
+
+<p>
+  The emulator was validated using the
+  <a href="https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file#available-tests"
+     target="_blank" rel="noopener noreferrer">
+    Timendus CHIP-8 Test Suite
+  </a>,
+  which verifies instruction decoding, arithmetic behavior, graphics rendering,
+  memory operations, timers and keyboard input handling. The available test ROMs
+  were used throughout development to ensure compatibility with the official
+  CHIP-8 specification and expected emulator behavior.
+</p>
+
+<p>
+  Additional compatibility testing was performed using ROMs from the
+  <a href="https://johnearnest.github.io/chip8Archive/"
+     target="_blank" rel="noopener noreferrer">
+    CHIP-8 Archive,
+  </a>
+  a CC0 collection of CHIP-8 programs and games. These ROMs were used to verify
+  correct execution of real applications, graphics rendering, sound generation,
+  input handling and overall gameplay behavior.
+</p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Hardware Emulation, Systems Programming</li>
+                <li><strong>Project date</strong> 2025</li>
+
+                <!-- Tech Used -->
+                <li>
+                  <strong>Tech Used</strong>
+                  <div class="tech-icons">
+                    <img src="assets/images/icons/cpp.png" alt="C++" class="skill-icon">
+                    <img src="assets/images/icons/sdl.png" alt="SDL2" class="skill-icon">
+                  </div>
+                </li>
+
+                <!-- GitHub -->
+                <li>
+                  <span class="tech-icons">
+                    <strong>GitHub</strong>
+                    <a href="https://github.com/oihan-az/Chip8Emulator" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </span>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Oihan Abruña</h3>
+      <p>What we do now echoes in eternity.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://instagram.com/oihan.az"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/in/oihan-abruña"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/oihan-az"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
