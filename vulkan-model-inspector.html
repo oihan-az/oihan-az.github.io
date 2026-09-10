@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Model Inspector (Vulkan)</title>
+  <title>3D Model Inspector (Vulkan)</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,10 +58,10 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Model Inspector (Vulkan)</li>
+            <li class="current">3D Model Inspector (Vulkan)</li>
           </ol>
         </nav>
-        <h1>Model Inspector (Vulkan)</h1>
+        <h1>3D Model Inspector (Vulkan)</h1>
       </div>
     </div><!-- End Page Title -->
 
@@ -91,23 +91,23 @@
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="assets/images/ModelInspector/Mercedes300SL.webp" class="image-small" alt="">
+              <img src="assets/images/ModelInspector/car.webp" class="image-small" alt="">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/ModelInspector/Mercedes300SL_Interior.webp" class="image-small" alt="">
+              <img src="assets/images/ModelInspector/music.webp" class="image-small" alt="">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/ModelInspector/Mercedes300SL_Front.webp" class="image-small" alt="">
+              <img src="assets/images/ModelInspector/helmet.webp" class="image-small" alt="">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/ModelInspector/Mercedes300SL_Back.webp" class="image-small" alt="">
+              <img src="assets/images/ModelInspector/spheres.webp" class="image-small" alt="">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/ModelInspector/Mercedes300SL_Side.webp" class="image-small" alt="">
+              <img src="assets/images/ModelInspector/spheres_shadow.webp" class="image-small" alt="">
             </div>
 
           </div>
@@ -120,13 +120,61 @@
 
         <div class="col-lg-8" data-aos="fade-up">
           <div class="portfolio-description">
-            <h2>Model Inspector (Vulkan)</h2> 
+        
+            <h2>Model Inspector (Vulkan)</h2>
+        
             <p>
-              This project marks my <strong>first exploration of the Vulkan API</strong>. I developed a <strong>real-time model inspector</strong> to visualize 3D models using a <strong>physically based rendering (PBR) shader</strong>, experimenting with Vulkan's graphics pipeline, descriptor sets, and resource management.
+              This project is a <strong>real-time 3D model inspector</strong> built with the
+              <strong>Vulkan API</strong>. The application provides an interactive
+              environment for inspecting 3D models, materials, and lighting while showcasing a range of
+              modern real-time rendering techniques.
             </p>
+        
+            <h4>Bindless Resources</h4>
+        
             <p>
-              The tool allows users to examine models under different lighting and material conditions, offering an interactive and modular interface. Through this project, I gained experience with modern rendering workflows.
+              Textures are managed through a <strong>bindless-style resource system</strong>. A single
+              descriptor set contains an <strong>array of textures</strong>, with materials storing
+              indices that are used directly in the shader to access their corresponding resources.
+              This approach simplifies resource binding and allows a large number of textures to be
+              accessed without requiring individual descriptor bindings for each material texture.
             </p>
+        
+            <h4>Physically Based Rendering</h4>
+        
+            <p>
+              The renderer implements <strong>physically based rendering (PBR)</strong> using the
+              <strong>Metallic-Roughness workflow</strong>. Material properties such as base color,
+              metallic, and roughness are combined with the lighting environment to produce physically
+              plausible surface responses.
+            </p>
+        
+            <h4>Image-Based Lighting</h4>
+                    
+            <p>
+              <strong>Image-Based Lighting (IBL)</strong> is used to provide realistic environment
+              illumination. The environment map is <strong>convolved and prefiltered into multiple mipmap
+              levels</strong>, with each level representing a different degree of roughness. During rendering,
+              the material's roughness is used to select the appropriate mip level, allowing surfaces with
+              different roughness values to sample the environment with the corresponding level of
+              specular blur.
+            </p>
+            
+            <p>
+              A <strong>BRDF integration LUT</strong> is also generated to account for the view-dependent
+              portion of the specular BRDF, completing the split-sum approximation used for real-time
+              specular IBL.
+            </p>
+        
+            <h4>Directional Shadows - PCSS</h4>
+        
+            <p>
+              Directional lighting is combined with a <strong>shadow mapping</strong> system to produce
+              dynamic shadows. To achieve more realistic soft shadows, the renderer implements
+              <strong>Percentage-Closer Soft Shadows (PCSS)</strong>, dynamically estimating the
+              penumbra based on the distance between the occluder and the receiver.
+            </p>
+        
           </div>
         </div>
 
@@ -135,7 +183,7 @@
               <h3>Project information</h3>
               <ul>
                 <li><strong>Category</strong> Computer Graphics</li>
-                <li><strong>Project date</strong> April, 2025</li>
+                <li><strong>Project date</strong> April, 2025 - September, 2026</li>
 
                 <!-- Tech Used -->
                 <li>
@@ -150,7 +198,7 @@
                 <li>
                   <span class="tech-icons">
                     <strong>GitHub</strong>
-                    <a href="javascript:void(0)" 
+                    <a href="https://github.com/oihan-az/3DModelInspector" 
                        target="_blank" 
                        rel="noopener noreferrer" 
                        aria-label="GitHub Repository">
